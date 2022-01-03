@@ -1,0 +1,23 @@
+@import '../../layout/variable';
+
+.p-contact {
+  padding: 20px;
+  text-align: center;
+}
+
+.p-contact__tell {
+  color: $colorDark;
+  @include fontSize(14px,1.4rem);
+}
+
+.p-contact__snsList {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px auto 0;
+  width: 200px;
+}
+
+.p-contact__snsImg {
+  width: 50px;
+  height: 50px;
+}

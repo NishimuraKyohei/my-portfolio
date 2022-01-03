@@ -1,0 +1,27 @@
+@import '../../layout/variable';
+
+.p-firstView {
+  position: relative;
+}
+
+.p-firstView__img {
+  object-fit: cover;
+  @include mq(u-sp) {
+    width: 100%;
+  }
+  @include mq(o-sp) {
+    height: 400px;
+  }
+}
+
+.p-firstView__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #bbb;
+  @include fontSize(24px,2.4rem);
+  font-weight: bold;
+  line-height: 1.5;
+}
+

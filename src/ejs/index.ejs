@@ -1,0 +1,137 @@
+<% var title = "My portfolio";
+   var description = "トップのdescription";
+   var url = "./assets/images/";
+   var navItem = [
+     {link:"#", text:"TOP"},
+     {link:"#area-1", text:"CONCEPT"},
+     {link:"#area-2", text:"ABOUT"},
+     {link:"#area-3", text:"SERVICE"},
+     {link:"#area-4", text:"CONTACT"},
+     ];
+   var conceptPicture = [
+    {pic:"pic1.png", alt:"デスクワーク", information:"テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト"},
+    {pic:"pic2.png", alt:"家族", information:"テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト"},
+    {pic:"pic3.png", alt:"傘をさす男", information:"テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト"},
+    {pic:"pic4.png", alt:"読書", information:"テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト"},
+   ];
+   var aboutImg = [
+     {image:"sample.jpeg", alt:"sample"},
+     {image:"sample2.jpeg", alt:"sample2"},
+     {image:"sample3.jpeg", alt:"sample3"},
+     {image:"sample4.jpeg", alt:"sample4"},
+     {image:"sample5.jpeg", alt:"sample5"}
+    ];
+   var serviceItem = [
+     {icon:"icon1.png",alt:"帽子アイコン",topic:"Import",text:"主にヨーロッパ地方の海外ブランドの仕入れ等"},
+     {icon:"icon2.png",alt:"PCアイコン",topic:"EC Store",text:"ファッションECサイト「Corori」の運営"},
+     {icon:"icon3.png",alt:"店舗アイコン",topic:"Store",text:"都内２３区内に展開する店舗「Corori」の運営・商品販売"}
+    ];
+   var snsIcon = [
+    {icon:"icon4.png",alt:"facebook"},
+    {icon:"icon5.png",alt:"twitter"},
+    {icon:"icon6.png",alt:"instagram"}
+   ];
+%>
+<% include src/ejs/template/_head %>
+
+<div id="p-splash">
+  <div id="p-splash__logo">
+    <img src="<%= url %>portfolio.png" alt="ポートフォリオ" class="p-splash__img">
+  </div>
+</div>
+
+<header class="l-header" id="header">
+  <div class="p-hamburger"><span></span><span></span><span></span></div>
+  <img src="<%= url %>logo.png" alt="ロゴ" class="l-header__logo">
+  <nav id="p-nav">
+    <div id="p-nav__list">
+      <ul class="p-nav__list" id="p-pageLink">
+        <% navItem.forEach(function(i){ %>
+          <li class="p-nav__item"><a href="<%= i.link %>" class="p-nav__link"><%= i.text %></a></li>
+        <% }) %>
+      </ul>
+    </div>
+  </nav>
+  <div class="p-nav__bg"></div>
+</header>
+
+
+<div class="p-firstView">
+  <img src="<%= url %>sea.jpg" alt="海" class="p-firstView__img">
+  <div class="p-firstView__title">My portfolio</div>
+</div>
+
+<div class="p-scrollDown"><span>Scroll</span></div>
+
+<main class="l-main">
+
+  <section class="p-concept" id="area-1">
+    <div class="c-subContent">
+      <div class="c-subTitle">CONCEPT</div>
+    </div>
+    <div class="p-concept__topic">スタイリッシュをセレクトする</div>
+    <div class="p-concept__text">普段使いからちょっと背伸びしたアイテムを探す<br>セレクトショップを運営するカラーは<br>あなたの”これが欲しかった”をかなえます</div>
+    <ul class="p-concept__list">
+      <% conceptPicture.forEach(function(i) { %>
+        <li class="p-concept__item">
+          <img src="<%= url %><%= i.pic %>" alt="<%= i.alt %>" class="p-concept__img">
+          <p class="p-concept__information"><%= i.information %></p>
+        </li>
+      <% }) %>
+    </ul>
+    <a href="#" class="c-btn c-btn__bgSkew"><span>会社概要</span></a>
+  </section>
+
+  <section class="p-about" id="area-2">
+    <div class="c-subContent">
+      <div class="c-subTitle">ABOUT</div>
+    </div>
+    <div class="p-slider">
+      <ul class="p-slider__list">
+        <% aboutImg.forEach(function(i){ %>
+          <li>
+            <img src="<%= url %><%= i.image %>" alt="<%= i.alt %>">
+          </li>
+        <% }) %>
+      </ul>
+    </div>
+    <a href="#" class="c-btn c-btn__bgSkew"><span>詳細</span></a>
+  </section>
+
+  <section class="p-service" id="area-3">
+    <div class="c-subContent">
+      <div class="c-subTitle">SERVICE</div>
+    </div>
+    <ul class="p-service__list">
+      <% serviceItem.forEach(function(i){ %>
+        <li class="p-service__item">
+          <a href="#">
+            <img src="<%= url %><%= i.icon %>" alt="<%= i.alt %>" class="p-service__icon">
+            <div class="p-service__topic"><%= i.topic %></div>
+            <p class="p-service__text"><%= i.text %></p>
+          </a>
+        </li>
+        <% }) %>
+    </ul>
+    <a href="#" class="c-btn c-btn__bgSkew"><span>サービス詳細</span></a>
+  </section>
+
+  <section class="p-contact" id="area-4">
+    <div class="c-subContent">
+      <div class="c-subTitle">CONTACT</div>
+    </div>
+    <div class="p-contact__tell">080-XXXX-XXXX</div>
+    <ul class="p-contact__snsList">
+      <% snsIcon.forEach(function(i){ %>
+        <li class="p-contact__snsItem">
+          <a href="" class="p-contact__snsItem">
+            <img src="<%= url %><%= i.icon %>" alt="<%= i.alt %>" class="p-contact__snsImg">
+          </a>
+        </li>
+      <% }) %>
+    </ul>
+  </section>
+</main>
+
+
+<% include src/ejs/template/_footer %>

@@ -1,0 +1,40 @@
+@import '../../layout/variable';
+
+.c-btn {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  border: 2px solid #555;
+  padding:  10px 30px;
+  text-align: center;
+  outline: none;
+  transition: ease .2s;
+}
+
+.c-btn span {
+  position: relative;
+  z-index: 3;
+  color: $colorDark;
+}
+
+.c-btn:hover span {
+  color: #fff;
+}
+
+.c-btn__bgSkew::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: $colorDark;
+  width: 100%;
+  height: 100%;
+  transition: transform .3s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+  transform: scale(1, 0);
+  transform-origin: center;
+}
+
+.c-btn__bgSkew:hover::before {
+  transform: scale(1, 1);
+}

@@ -1,0 +1,23 @@
+@import '../../layout/variable';
+
+.c-subContent {
+  text-align: center;
+  @include mq(u-sp) {
+    padding: 50px 0;
+  }
+  @include mq(o-sp) {
+    padding: 100px 0;
+  }
+}
+
+.c-subTitle {
+  color: $colorDark;
+  font-weight: bold;
+  @include mq(u-sp) {
+    @include fontSize(14px,1.4rem);
+  }
+  @include mq(o-sp) {
+    @include fontSize(24px, 2.4rem);
+  }
+}
+

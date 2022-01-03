@@ -1,0 +1,31 @@
+@import '../../layout/variable';
+
+.p-service {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.p-service__list {
+  padding: 20px 0;
+}
+
+.p-service__item {
+  margin: 50px;
+}
+
+.p-service__icon {
+  width: 100px;
+  height: 100px;
+}
+
+.p-service__topic {
+  color: $colorDark;
+  @include fontSize(14px,1.4rem);
+  font-weight: bold;
+}
+
+.p-service__text {
+  margin-top: 20px;
+  color: $colorDark;
+  @include fontSize(12px,1.2rem);
+}

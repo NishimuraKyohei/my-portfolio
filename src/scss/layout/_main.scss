@@ -1,0 +1,10 @@
+@import '../foundation/var';
+
+.l-main {
+  @include mq(u-sp) {
+    padding: 50px 20px;
+  }
+  @include mq(o-sp) {
+    padding: 100px 200px;
+  }
+}

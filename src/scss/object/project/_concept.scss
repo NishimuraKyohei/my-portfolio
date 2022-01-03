@@ -1,0 +1,89 @@
+@import '../../layout/variable';
+
+.p-concept {
+  text-align: center;
+}
+
+.p-concept__topic {
+  color: $colorDark;
+  @include mq(u-sp) {
+    @include fontSize(14px, 1.4rem);
+  }
+  @include mq(o-sp) {
+    @include fontSize(18px, 1.8rem);
+  }
+}
+
+.p-concept__text {
+  color: $colorDark;
+  @include mq(u-sp) {
+    margin-top: 20px;
+    @include fontSize(12px,1.2rem);
+    line-height: 2.0;
+  }
+  @include mq(o-sp) {
+    margin-top: 50px;
+    @include fontSize(16px, 1.6rem);
+    line-height: 2.5;
+  }
+}
+
+.p-concept__list {
+  width: 100%;
+  @include mq(u-sp) {
+    margin: 50px 0;
+  }
+  @include mq(o-sp) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+  }
+}
+
+.p-concept__item {
+  background: #fff;
+  border-radius: 8px;
+  border-bottom: 5px solid #ccc;
+  border-right: 5px solid #ccc;
+  @include mq(u-sp) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    &:nth-child(n+2) {
+      margin-top: 50px;
+    }
+  }
+  @include mq(o-sp) {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.p-concept__img {
+  object-fit: cover;
+  @include mq(u-sp) {
+    width: 90px;
+    height: 90px;
+  }
+  @include mq(o-sp) {
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.p-concept__information {
+  @include mq(u-sp) {
+    margin-top: 20px;
+    width: 70%;
+    height: 100px;
+  }
+  @include mq(o-sp) {
+    margin-top: 50px;
+  }
+}
+
