@@ -6,11 +6,25 @@
 }
 
 .p-service__list {
-  padding: 20px 0;
+  @include mq(u-sp) {
+    padding: 20px 0;
+  }
+  @include mq(o-sp) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+  }
 }
 
 .p-service__item {
-  margin: 50px;
+  @include mq(u-sp) {
+    margin: 50px;
+  }
+  @include mq(o-sp) {
+    width: 450px;
+  }
 }
 
 .p-service__icon {

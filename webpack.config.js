@@ -76,11 +76,11 @@ module.exports = (env, argv) => {
         {
           test: /\.scss$/,
           use: [
-            MiniCssExtractPlugin.loader, // javascriptとしてバンドルせず css として出力する
+            MiniCssExtractPlugin.loader, 
             {
               loader: 'css-loader',
               options: {
-                url: false,// sassで相対パスを書けるようにする
+                url: false,
                 sourceMap: true,
               },
             },
