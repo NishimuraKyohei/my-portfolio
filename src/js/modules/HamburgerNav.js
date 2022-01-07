@@ -11,5 +11,5 @@ export default function animateHamburgerNav() {
     $(".p-hamburger").removeClass('active');
     $("#p-nav").removeClass('panelactive');
     $(".p-nav__bg").removeClass('circleactive');
-});
+  });
 }
