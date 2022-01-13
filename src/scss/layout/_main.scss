@@ -5,6 +5,7 @@
     padding: 50px 20px;
   }
   @include mq(o-sp) {
-    padding: 100px 100px;
+    margin: 0 auto;
+    // padding: 100px 100px;
   }
 }

@@ -14,7 +14,8 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 50px;
+    width: 960px;
+    margin: 0 auto 50px;
   }
 }
 
@@ -23,7 +24,7 @@
     margin: 50px;
   }
   @include mq(o-sp) {
-    width: 450px;
+    width: 250px;
   }
 }
 

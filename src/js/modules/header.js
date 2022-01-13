@@ -2,8 +2,8 @@ import $ from 'jquery'
 
 export default function animateHeader() {
   function FixedAnime() {
-    var headerH = $('#header').outerHeight(true);
-    var scroll = $(window).scrollTop();
+    const headerH = $('#header').outerHeight(true);
+    const scroll = $(window).scrollTop();
     if(scroll >= headerH){
       $('#header').addClass('fixed');
     }else{
@@ -11,11 +11,11 @@ export default function animateHeader() {
     }
   }
 
-  $(window).scroll(function() {
+  $(window).on('scroll', () => {
     FixedAnime();
   });
 
-  $(window).on('load',function() {
+  $(window).on('load',() => {
     FixedAnime();
   });
 }

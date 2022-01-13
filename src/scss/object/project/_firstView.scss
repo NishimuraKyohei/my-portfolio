@@ -2,26 +2,55 @@
 
 .p-firstView {
   position: relative;
-}
-
-.p-firstView__img {
-  object-fit: cover;
+  margin: auto;
+  animation: fluidrotate 30s ease 0s infinite;
   @include mq(u-sp) {
-    width: 100%;
+    width: 40vh;
+    height: 30vh;
+    background: #fff100;
   }
   @include mq(o-sp) {
-    height: 400px;
+    width: 60vh;
+    height: 40vh;
+    background: greenyellow;
   }
 }
+
+@keyframes fluidrotate {
+
+  0%, 100% {
+      border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
+  }
+  14% {
+      border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
+  }
+  28% {
+      border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;
+  }
+  42% {
+      border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;
+  }
+  56% {
+      border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;
+  }
+  70% {
+      border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;
+  }
+  84% {
+      border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
+  }
+
+}
+
 
 .p-firstView__title {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  color: #bbb;
-  @include fontSize(24px,2.4rem);
-  font-weight: bold;
+  color: #000;
+  @include fontSize(30px,3.0rem);
+  font-family: 'Times New Roman', Times, serif;
   line-height: 1.5;
 }
 

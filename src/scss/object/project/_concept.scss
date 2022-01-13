@@ -38,7 +38,8 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin: 100px 0;
+    width: 960px;
+    margin: 100px auto;
   }
 }
 
@@ -58,8 +59,8 @@
     }
   }
   @include mq(o-sp) {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
   }
 }
 
@@ -82,8 +83,8 @@
     width: 70%;
     height: 100px;
   }
-  @include mq(o-sp) {
-    margin-top: 50px;
-  }
+  // @include mq(o-sp) {
+  //   margin-top: 50px;
+  // }
 }
 

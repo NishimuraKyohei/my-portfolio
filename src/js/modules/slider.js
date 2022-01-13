@@ -1,5 +1,5 @@
-import $ from 'jquery'
-import './slick.min'
+import $ from 'jquery';
+import 'slick-carousel';
 
 export default function animateSlider() {
   $('.p-slider__list').slick({
