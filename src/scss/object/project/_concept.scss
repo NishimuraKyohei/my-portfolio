@@ -29,21 +29,22 @@
 }
 
 .p-concept__list {
-  width: 100%;
   @include mq(u-sp) {
     margin: 50px 0;
+    width: 100%;
   }
   @include mq(o-sp) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    width: 960px;
+    max-width: 960px;
     margin: 100px auto;
+    padding: 0 20px;
   }
 }
 
-.p-concept__item {
+.p-concept__list > li {
   background: #fff;
   border-radius: 8px;
   border-bottom: 5px solid #ccc;
@@ -59,7 +60,7 @@
     }
   }
   @include mq(o-sp) {
-    width: 200px;
+    width: 20%;
     height: 200px;
   }
 }
@@ -83,8 +84,6 @@
     width: 70%;
     height: 100px;
   }
-  // @include mq(o-sp) {
-  //   margin-top: 50px;
-  // }
 }
+
 

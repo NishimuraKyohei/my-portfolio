@@ -135,6 +135,14 @@
 }
 
 @include mq(o-sp) {
+  .p-hamburger {
+    display: none;
+  }
+
+  .p-nav__bg {
+    display: none;
+  }
+
   .p-nav__list {
     display: flex;
     justify-content: right;
