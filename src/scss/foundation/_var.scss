@@ -24,10 +24,16 @@ $breakpoints: (
 // PATH
 $bgPath: '../../assets/images/';
 
-// COLOR
-$colorLight: #3cabe0;
-$colorNormal: #2496cd;
-$colorDark: #012c45;
-$colorBlack: #222;
-$colorGray: #666;
+// color
+$colorMain: #f7f7f7;
+$colorGrey: #ccc;
+$colorDark: #333;
+$colorBlock: #000;
 $colorWhite: #fff;
+
+// font-size
+$fontConfig: 62.5%;
+@mixin fontSize($sizePx,$sizeRem) {
+  font-size: $sizePx;
+  font-size: $sizeRem;
+}
